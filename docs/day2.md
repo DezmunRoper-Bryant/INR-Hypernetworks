@@ -2,7 +2,7 @@
 ## Accompishments
 
 1. Review basic INRs and what they actually are
-2. 
+2. Used torchvision.datasets.CIFAR10 and torch.util.data.DataLoader to download and store the dataset into a dataloader that is put inside of a iterator and iterated through (with next()) to print out the dataset
 3. 
 4. 
 5. 
@@ -41,4 +41,12 @@ Maybe we can look at the 1st and 2nd derivative of the recreated images and ALSO
 2. how do I call file locations in my project folder? "/data" goes all the way into  my local disk when I wanted it to call the /data folder in my project
 3. should the data folder be in src?
     YES I KNOW THIS IS A DUMB QUESTION
+4. Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        data/
+        docs/day2.md
+        src/
 
+    if I do git add . 
+    and the gitignore ignored the data folder, will something bad happen?
