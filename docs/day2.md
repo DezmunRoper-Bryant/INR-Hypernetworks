@@ -3,9 +3,6 @@
 
 1. Review basic INRs and what they actually are
 2. Used torchvision.datasets.CIFAR10 and torch.util.data.DataLoader to download and store the dataset into a dataloader that is put inside of a iterator and iterated through (with next()) to print out the dataset
-3. 
-4. 
-5. 
 
 ## Thoughts
 This is project 1 for my June-December grind. Project 2 was the recreation of various GNN papers but funny enough I will have to attempt to recreate the INRs from research papers as well. A LOT of papers will be read over the next few months sadly. 
