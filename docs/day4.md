@@ -1,4 +1,4 @@
-# Date: 9/13/2026
+# Date: 6/13/2026
 ## Accompishments
 1. Remade the normalization function
 2. Constructed a simple INR model with a relu activation function in the middle
