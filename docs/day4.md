@@ -14,11 +14,20 @@ I tried to create a training loop as well but it is not training. The code takes
 As I typed this out, I could have just makes a 32x32 tensor and just appened the loss values then calculated the mean of that entire tensor. But I have work so I when do that at 10:00 when I get home
 
 Part 2 (Night)
+Yeah I'll do that tmr!
 
 
 ## Things I learned
 1. torch.nn.Linear already has a bias included, y = Wx + b. For some reason I thought it never had a bias, or rather I never thought about it deeply
 2. Epoch in range, model.train, calc loss, optimizer zero grad, loss back, optimizer step
+
+## Challenges/Errors
+1. The model is not training properly
+'''
+epoch: 0, loss: 16061.868432760239
+epoch: 1, loss: 16061.868432760239
+epoch: 2, loss: 16061.868432760239
+'''
 
 ## Sources
 1. https://discuss.pytorch.org/t/about-the-nn-module-forward/20858
@@ -27,3 +36,4 @@ Part 2 (Night)
 4. https://medium.com/data-science/the-unofficial-pytorch-optimization-loop-song-89657dd3a434
 
 ## AI usage (Prompts)
+1. None were used

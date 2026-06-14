@@ -66,20 +66,36 @@ model = INRModel()
 lossfn = nn.MSELoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 
-
-for epoch in range(epochs):
+for epoch in range (epochs):
     model.train()
-    loss_store = np.array([])
+    loss_tensor = torch.empty(size=(x_dim,y_dim))
     for i in range(x_dim):
         for j in range(y_dim):
             pred = model(coords[:,i,j])
-            logit = lossfn(pred, img[:,i,j])
-            logit = logit.detach().numpy()
-            loss_store = np.append(loss_store, logit)
-    loss_np = np.mean(loss_store)
-    loss = torch.tensor(loss_np, requires_grad=True)
-    print(f"epoch: {epoch}, loss: {loss_np}")
+            loss_tensor[i,j] = lossfn(pred, img[:,i,j])
+    loss = torch.mean(loss_tensor)
+    print(f"epoch: {epoch}, loss: {loss}")
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
+
+
+            
+ 
+
+# for epoch in range(epochs):
+#     model.train()
+#     loss_store = np.array([])
+#     for i in range(x_dim):
+#         for j in range(y_dim):
+#             pred = model(coords[:,i,j])
+#             logit = lossfn(pred, img[:,i,j])
+#             logit = logit.detach().numpy()
+#             loss_store = np.append(loss_store, logit)
+#     loss_np = np.mean(loss_store)
+#     loss = torch.tensor(loss_np, requires_grad=True)
+#     print(f"epoch: {epoch}, loss: {loss_np}")
+#     optimizer.zero_grad()
+#     loss.backward()
+#     optimizer.step()
 
