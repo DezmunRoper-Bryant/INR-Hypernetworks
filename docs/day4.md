@@ -23,11 +23,11 @@ Yeah I'll do that tmr!
 
 ## Challenges/Errors
 1. The model is not training properly
-'''
+```
 epoch: 0, loss: 16061.868432760239
 epoch: 1, loss: 16061.868432760239
 epoch: 2, loss: 16061.868432760239
-'''
+```
 
 ## Sources
 1. https://discuss.pytorch.org/t/about-the-nn-module-forward/20858
